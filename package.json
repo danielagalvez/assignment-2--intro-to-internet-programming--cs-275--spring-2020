@@ -1,7 +1,6 @@
 {
   "name": "assignment-2--intro-to-internet-programming--cs-275--spring-2020",
   "version": "1.0.0",
-  "description": "Gulp Project",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,11 +12,9 @@
   "author": "daniela-galvez",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/code-warrior/assignment-2--intro-to-internet-programming--cs-275--spring-2020/issues"
   },
   "homepage": "https://github.com/code-warrior/assignment-2--intro-to-internet-programming--cs-275--spring-2020#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-htmlmin": "^5.0.1"
   }
 }
