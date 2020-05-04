@@ -9,3 +9,8 @@ let copyCSS = () => {
         .pipe(dest(`dev/css/`));
 };
 
+let copyJS = () => {
+    return src(`js/*.js`)
+        .pipe(dest(`dev/js/`));
+};
+
