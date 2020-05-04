@@ -33,3 +33,26 @@ button.addEventListener(`click`, () => {
         document.getElementById('cali').style.display = "block";
 
     }
+    else if (selected.value != "California Rice" && userInput == 0)
+    {
+        alert("Please enter a valid number");
+        location.reload();
+        return false;
+
+    }
+
+    else if(selected.value != "California Rice" && userInput != 0)
+    {
+        let paragraph = document.getElementsByTagName(`p`)[2];
+        let amountOfRice = parseFloat(userInput);
+        let amountOfWater = parseFloat(userInput)*(2);
+        let minute = parseFloat(userInput)*(2.25);
+        let minuteToCook = minute.toFixed(2);
+        let oil = parseFloat(userInput)*(0.0625);
+        let amountOfOil = oil.toFixed(2);
+        paragraph.textContent = 'Combine ' + amountOfRice+ ' fluid ounces of rice with ' + amountOfWater + ' fluid ounces of water and ' + amountOfOil + ' fluid ounces of olive oil. Bring to a boil, then reduce heat to the lowest setting. Cook for about ' + minuteToCook + ' minutes.';
+        document.getElementById('cali').style.display = "none";
+        document.getElementById('white').style.display = "block";
+    }
+
+});
