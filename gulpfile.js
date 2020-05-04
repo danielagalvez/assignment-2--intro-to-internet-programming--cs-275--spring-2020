@@ -25,3 +25,9 @@ let lintCSS = () => {
 
     };
 
+let lintJS = () => {
+            return src(`dev/js/*.js`)
+                .pipe(jsLinter())
+                .pipe(jsLinter.formatEach(`compact`, process.stderr))
+        };
+
