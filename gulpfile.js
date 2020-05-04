@@ -77,3 +77,6 @@ let serve = () => {
 
 };
 
+    exports.default = series(copyCSS, copyJS, validateHTML, serve, lintCSS, lintJS, transpileJSForDev, compileCSSForDev);
+    exports.dev = series(copyCSS, copyJS, compileCSSForDev, lintCSS, lintJS, transpileJSForDev);
+    exports.prod = (compressHTML, copyCSSForProd, copyJSForProd);
