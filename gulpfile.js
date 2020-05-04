@@ -73,3 +73,7 @@ let serve = () => {
         }
     });
 
+    watch([`html/**/*.html`, `css/*.css`, `js/*.js`]).on(`change`, reload);
+
+};
+
