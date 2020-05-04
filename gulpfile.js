@@ -1,3 +1,14 @@
+const htmlCompressor = require(`gulp-htmlmin`);
+const htmlValidator = require(`gulp-html`);
+const jsLinter = require(`gulp-eslint`);
+const cssLinter = require(`gulp-stylelint`);
+const browserSync = require(`browser-sync`);
+const sass = require(`gulp-sass`);
+const babel = require(`gulp-babel`);
+const reload = browserSync.reload;
+const { src, dest, series, watch } = require(`gulp`);
+
+
 let validateHTML = () => {
     return src(`html/*.html`)
         .pipe(htmlValidator())
