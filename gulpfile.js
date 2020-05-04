@@ -46,3 +46,8 @@ let transpileJSForDev = () => {
             .pipe(dest(`dev/js/`));
     };
 
+let compressHTML = () => {
+        return src(`dev/html/*.html`)
+            .pipe(htmlCompressor({collapseWhitespace: true}))
+            .pipe(dest(`prod/html/`))};
+
