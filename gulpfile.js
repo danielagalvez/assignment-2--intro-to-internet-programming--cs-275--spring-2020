@@ -31,3 +31,12 @@ let lintJS = () => {
                 .pipe(jsLinter.formatEach(`compact`, process.stderr))
         };
 
+let compileCSSForDev = () => {
+    return src(`css/*.css`)
+        .pipe(sass({
+            outputStyle: `expanded`,
+            precision: 10
+        }).on(`error`, sass.logError))
+        .pipe(dest(`dev/css/`));
+};
+
