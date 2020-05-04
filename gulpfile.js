@@ -51,3 +51,8 @@ let compressHTML = () => {
             .pipe(htmlCompressor({collapseWhitespace: true}))
             .pipe(dest(`prod/html/`))};
 
+let copyCSSForProd = () => {
+    return src(`dev/css/*.css`)
+        .pipe(dest(`prod/css/`));
+};
+
