@@ -60,3 +60,16 @@ let copyJSForProd = () => {
     return src(`dev/js/*.js`)
         .pipe(dest(`prod/js/`));
 };
+let serve = () => {
+    browserSync({
+
+        server: {
+            baseDir: [
+                `./dev`,
+                `./html`,
+                `./css`,
+                `./js`,
+            ]
+        }
+    });
+
