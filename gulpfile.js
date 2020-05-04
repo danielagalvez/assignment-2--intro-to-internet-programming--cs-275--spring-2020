@@ -14,3 +14,14 @@ let copyJS = () => {
         .pipe(dest(`dev/js/`));
 };
 
+let lintCSS = () => {
+        return src(`dev/css/*.css`)
+            .pipe(cssLinter({
+                failAfterError: true,
+                reporters: [
+                    {formatter: `verbose`, console: true}
+                ]
+            }))
+
+    };
+
