@@ -56,3 +56,7 @@ let copyCSSForProd = () => {
         .pipe(dest(`prod/css/`));
 };
 
+let copyJSForProd = () => {
+    return src(`dev/js/*.js`)
+        .pipe(dest(`prod/js/`));
+};
