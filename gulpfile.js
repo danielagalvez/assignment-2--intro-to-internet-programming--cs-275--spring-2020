@@ -87,7 +87,6 @@ let serve = () => {
     watch([`html/**/*.html`, `css/*.css`, `js/*.js`]).on(`change`, reload);
 
 };
-
     exports.default = series(copyCSS, copyJS, validateHTML, serve, lintCSS, lintJS, transpileJSForDev, compileCSSForDev);
-    exports.dev = series(copyCSS, copyJS, compileCSSForDev, lintCSS, lintJS, transpileJSForDev);
-    exports.prod = (compressHTML, copyCSSForProd, copyJSForProd);
+    exports.dev = series(copyCSS, copyJS, compileCSSForDev, lintCSS, lintJS, transpileJSForDev, serve);
+    exports.prod = (compressHTML, copyCSSForProd, copyJSForProd, serve);
