@@ -40,3 +40,9 @@ let compileCSSForDev = () => {
         .pipe(dest(`dev/css/`));
 };
 
+let transpileJSForDev = () => {
+        return src(`js/*.js`)
+            .pipe(babel())
+            .pipe(dest(`dev/js/`));
+    };
+
